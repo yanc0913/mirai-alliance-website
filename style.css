@@ -1,0 +1,435 @@
+/* ========== 基本主题颜色（蓝绿色 / teal） ========== */
+:root {
+  --bg: #f3faf9;              /* 整体背景：很浅的蓝绿色 */
+  --bg-alt: #ffffff;          /* 卡片背景 */
+  --accent: #1aa6a0;          /* 主色：teal */
+  --accent-soft: #e0f7f5;     /* 浅色强调背景 */
+  --accent-deep: #147d78;     /* 深一点的墨绿蓝（文字/边框） */
+  --text-main: #11313a;       /* 主文字颜色（深蓝绿色） */
+  --text-muted: #6b7a80;      /* 次要文字 */
+  --border: #dae5e4;
+  --radius-lg: 18px;
+  --shadow-soft: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "ヒラギノ角ゴ ProN W3", "Meiryo", sans-serif;
+  background: radial-gradient(circle at top left, #f0fbff, #f3faf9);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ========== Header / Navigation ========== */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  background: rgba(243, 250, 249, 0.92);
+  border-bottom: 1px solid rgba(218, 229, 228, 0.9);
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--text-main);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.brand-title {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.brand-subtitle {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a .jp {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
+.nav-links a:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* ========== Layout container ========== */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+/* ========== Hero section ========== */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
+  gap: 32px;
+  margin-top: 16px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-kicker.en {
+  font-size: 14px;
+  color: var(--accent-deep);
+}
+
+.hero-kicker.jp {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.hero-title {
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+.hero-body.en {
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+.hero-body.jp {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* 可选 hero 图片区域 */
+.hero-image-wrapper {
+  margin-top: 12px;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 26px rgba(18, 82, 72, 0.15);
+}
+
+/* 右侧统计卡片 */
+
+.hero-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-card {
+  width: 100%;
+  max-width: 340px;
+  background: radial-gradient(circle at top left, #e9fbff, #ffffff);
+  border-radius: 22px;
+  padding: 18px 18px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-card-title.en {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-deep);
+}
+
+.hero-card-title.jp {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.hero-card-text.en {
+  font-size: 12px;
+  color: var(--text-main);
+}
+
+.hero-card-text.jp {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.hero-stat {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+  padding: 10px;
+  border: 1px solid rgba(243, 250, 249, 0.9);
+}
+
+.hero-stat-label.en {
+  font-size: 11px;
+  color: var(--text-main);
+}
+
+.hero-stat-label.jp {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.hero-stat-value {
+  margin-top: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-deep);
+}
+
+/*.hero-link 保留给“最新活动报道”用 */
+.hero-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--accent-deep);
+}
+
+/* ========== Generic sections ========== */
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section-header {
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.section-title .jp {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-left: 6px;
+}
+
+.section-subtitle.en {
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+.section-subtitle.jp {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ========== Cards, schedule, events ========== */
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: var(--bg-alt);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 18px rgba(17, 50, 53, 0.06);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card-title.en {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.card-title.jp {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.card-meta.en {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.event-list {
+  list-style: none;
+  font-size: 13px;
+}
+
+.event-item + .event-item {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+}
+
+.event-title.en {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.event-title.jp {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.event-meta.en {
+  font-size: 11px;
+  color: var(--text-main);
+}
+
+.event-meta.jp {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+/* ========== Contact section ========== */
+
+.contact-text.en {
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+.contact-text.jp {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.contact-email {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-deep);
+}
+
+.contact-email a {
+  text-decoration: underline;
+}
+
+/* ========== Footer ========== */
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 16px 20px 26px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.footer-note {
+  text-align: right;
+}
+
+/* ========== Responsive ========== */
+
+@media (max-width: 800px) {
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-right {
+    justify-content: flex-start;
+  }
+
+  .schedule-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ========== Booklet ========== */
+
+.booklet-description.en {
+  font-size: 13px;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.booklet-description.jp {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.booklet-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-deep);
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 8px;
+}

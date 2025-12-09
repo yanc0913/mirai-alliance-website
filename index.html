@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mirai Alliance – Women in Life Sciences</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mirai Alliance – A bilingual community site supporting women in life sciences." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <!-- 点击 logo/标题会回到首页 -->
+      <a href="index.html" class="brand">
+        <div class="brand-title">MIRAI ALLIANCE</div>
+        <div class="brand-subtitle">
+          Women in Life Sciences｜ライフサイエンス分野の女性支援ネットワーク
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#about">About<span class="jp">｜概要</span></a>
+        <a href="#schedule">Schedule<span class="jp">｜スケジュール</span></a>
+        <!-- TODO: 如果你有 members.html / reports.html，这里链接可以保留；没有的话先改成 # -->
+        <a href="members.html">Members<span class="jp">｜メンター・メンティー</span></a>
+        <a href="reports.html">Activity Reports<span class="jp">｜活動レポート</span></a>
+        <a href="#contact">Contact<span class="jp">｜お問い合わせ</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ===================== Hero / About ===================== -->
+    <section id="about" class="hero">
+      <div class="hero-left">
+        <p class="hero-kicker en">
+          A gentle, safe space for women in life sciences to connect.
+        </p>
+        <p class="hero-kicker jp">
+          ライフサイエンス分野で働く女性のための、ゆるやかで安心できるつながりの場。
+        </p>
+
+        <h1 class="hero-title">
+          Supporting Women in Life Sciences,<br>
+          Today and Tomorrow
+        </h1>
+
+        <!-- TODO: 这里是 Mirai 的英文主介绍 -->
+        <p class="hero-body en">
+         The Mirai Alliance is a mentorship network for women researchers in life sciences, 
+         launched by the BDR Diversity Working Group with support from the RIKEN Diversity Acceleration Fund. 
+         It connects early-career researchers with established women scientists, 
+         offering space for open conversation about research careers, work-life balance, and leadership. 
+         Through mentorship, community, and shared experience, Mirai Alliance supports women to grow with 
+         confidence and build sustainable, fulfilling scientific careers.
+        </p>
+
+        <p class="hero-body en">
+         We aim to:
+          Build connections between generations of women scientists.
+          Encourage open discussion on challenges and opportunities in research careers.
+          Provide mentorship and resources to navigate key career transitions.
+          Promote leadership, resilience, and visibility of women in science.
+        </p>
+
+        <p class="hero-body en">
+          世代を超えて女性研究者同士のつながりを築く。
+          研究キャリアにおける課題や機会について、率直に意見を交わす場をつくる。
+          キャリアの転機を乗り越えるためのメンタリングとリソースを提供する。
+          女性研究者のリーダーシップ、レジリエンス（しなやかさ）、および可視性を高める。
+        </p>
+        
+        <!-- TODO: 如果你以后想放一张横幅图片（例如 booklet 的封面），可以用下面这个 img 占位 -->
+        <!--
+        <div class="hero-image-wrapper">
+          <img src="images/mirai-hero.jpg" alt="Mirai Alliance banner" class="hero-image">
+        </div>
+        -->
+      </div>
+
+      <aside class="hero-right">
+        <div class="hero-card">
+          <div class="hero-card-title en">Program snapshot </div>
+          <div class="hero-card-title jp">プログラムの概要 </div>
+          <p class="hero-card-text en">
+            The numbers of registered mentors and Mentees, and typical event frequency.
+          </p>
+          <p class="hero-card-text jp">
+            登録メンター・メンティー数や、年間の主なイベント頻度など。  
+          <div class="hero-stats">
+            <!-- TODO: 修改这里的数字为真实的 mentor / mentee 数 -->
+            <div class="hero-stat">
+              <div class="hero-stat-label en">Mentors</div>
+              <div class="hero-stat-label jp">メンター</div>
+              <div class="hero-stat-value">12</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-label en">Mentees</div>
+              <div class="hero-stat-label jp">メンティー</div>
+              <div class="hero-stat-value">24</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-label en">Events / year</div>
+              <div class="hero-stat-label jp">年間イベント</div>
+              <div class="hero-stat-value">4</div>
+            </div>
+          </div>
+
+          <!-- TODO: 这里可以放一个“最新活动报道”的链接，例如指向 reports.html 的某个 section -->
+          <!--
+          <a href="reports.html#latest" class="hero-link">
+            Latest activity report／最新の活動レポート →
+          </a>
+          -->
+        </div>
+      </aside>
+    </section>
+
+    <!-- ===================== Schedule & Events ===================== -->
+    <section id="schedule" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          Schedule &amp; Events<span class="jp">｜スケジュールとイベント</span>
+        </h2>
+        <p class="section-subtitle en">
+          Key sessions and milestones for the Mirai Alliance program.
+        </p>
+        <p class="section-subtitle jp">
+          メンタリングやイベントなど、主な日程とマイルストーンを掲載しています。
+        </p>
+      </div>
+
+      <div class="schedule-grid">
+        <!-- 左：Upcoming events -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title en">All events</div>
+              <div class="card-title jp">イベント</div>
+            </div>
+            <!-- TODO: 更新时间 -->
+            <div class="card-meta en">Last updated: 2025-11-20</div>
+          </div>
+
+          <ul class="event-list">
+            <!-- TODO: 每个 event-item 表示一场活动，复制/修改即可 -->
+            <li class="event-item">
+              <div class="event-title en">
+                Kick-off Symposium “Beyond Mentorship”
+              </div>
+              <div class="event-title jp">
+                キックオフ・シンポジウム「メンタリングのその先へ」
+              </div>
+              <div class="event-meta en">
+                17 Nov 2025 · Building C Auditorium · Hybrid (on-site &amp; online)
+              </div>
+              <div class="event-meta jp">
+                2025年11月17日（月）｜C棟ホール｜ハイブリッド開催（対面＋オンライン）
+              </div>
+            </li>
+
+            <li class="event-item">
+              <div class="event-title en">
+                Mentor–mentee matching
+              </div>
+              <div class="event-title jp">
+                メンター・メンティーのマッチング
+              </div>
+              <div class="event-meta en">
+                Dec 2025 - Jan 2026 (planned) · Matching Form · Details to be announced.
+              </div>
+              <div class="event-meta jp">
+                2025年12月ごろ開催予定｜マッチングフォーム｜詳細は追ってご案内します。
+              </div>
+            </li>
+
+            <li class="event-item">
+              <div class="event-title en">Peer Mentoring Circles</div>
+              <div class="event-title jp">ピア・メンタリング・サークル</div>
+              <div class="event-meta en">
+                Quarterly · Small-group meetings focusing on shared topics.
+              </div>
+              <div class="event-meta jp">
+                毎旬開催（少人数グループ）｜テーマごとに自由に話せる場を提供します。
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 右：Program timeline / 可插图片或海报 -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title en">Program timeline</div>
+            <div class="card-title jp">プログラム全体の流れ</div>
+          </div>
+
+          <ul class="event-list">
+            <li class="event-item">
+              <div class="event-title en">Mentor–mentee matching</div>
+              <div class="event-title jp">メンター・メンティーのマッチング</div>
+              <div class="event-meta en">Nov–Dec 2025</div>
+              <div class="event-meta jp">2025年12〜2026年1月</div>
+            </li>
+            <li class="event-item">
+              <div class="event-title en">Regular meetings</div>
+              <div class="event-title jp">定期ミーティング</div>
+              <div class="event-meta en">
+                Jan 2026 – Oct 2026 · Schedule decided within each pair / group.
+              </div>
+              <div class="event-meta jp">
+                2026年1月〜2026年10月｜各ペア・グループで日程を調整します。
+              </div>
+            </li>
+            <li class="event-item">
+              <div class="event-title en">Closing session &amp; networking</div>
+              <div class="event-title jp">振り返りセッション＆ネットワーキング</div>
+              <div class="event-meta en">Winter 2026 (planned)</div>
+              <div class="event-meta jp">2026年冬ごろを予定</div>
+            </li>
+          </ul>
+
+          <!-- TODO: 这里可以插入一张时间线图 / 海报，或者一篇“Latest News” -->
+          <!--
+          <div class="card-extra">
+            <img src="images/timeline.png" alt="Program timeline" class="card-image">
+          </div>
+          -->
+        </div>
+      </div>
+    </section>
+    
+    <!-- ===================== Booklet Section ===================== -->
+    <section id="booklet" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          Program Booklet<span class="jp">｜プログラム冊子</span>
+        </h2>
+
+        <p class="section-subtitle en">
+          Download the full Mirai Alliance booklet, including mentor profiles,
+          schedule, and detailed program information.
+        </p>
+
+        <p class="section-subtitle jp">
+          メンター紹介、スケジュール、プログラムの詳細をまとめた
+          Mirai Alliance の冊子はこちらからダウンロードできます。
+        </p>
+      </div>
+
+      <div class="card">
+        <p class="booklet-description en">
+          The booklet contains the profiles of all mentors participating in the program.
+          Please check it for full details.
+        </p>
+        <p class="booklet-description jp">
+          本冊子には、プログラムに参加するすべてのメンターのプロフィールが掲載されています。
+          詳細はこちらをご覧ください。
+        </p>
+
+        <!-- TODO: Replace PDF filename here -->
+        <a class="booklet-link" href="booklet/mirai-booklet.pdf" target="_blank">
+          👉 Download Booklet (PDF)  
+          <span class="jp">｜冊子をダウンロード</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== Contact ===================== -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          Contact<span class="jp">｜お問い合わせ</span>
+        </h2>
+        <p class="section-subtitle en">
+          For questions about the program, participation, or collaboration.
+        </p>
+        <p class="section-subtitle jp">
+          プログラムに関するご質問、参加希望、連携のご相談などがありましたら、下記までお問い合わせください。
+        </p>
+      </div>
+
+      <div class="card">
+        <!-- TODO: 如需更改内部成员向的说明，可以修改下面两段文字 -->
+        <p class="contact-text en">
+          For internal members, please also check announcements on the dedicated Slack
+          channel and mailing list.
+        </p>
+        <p class="contact-text jp">
+          所内メンバーの方は、専用の Slack チャンネルおよびメーリングリストでのアナウンスもあわせてご確認ください。
+        </p>
+
+        <!-- TODO: 修改为你想对外公开的邮箱地址 -->
+        <p class="contact-text en">
+          External inquiries are welcome via the email address below:
+        </p>
+        <p class="contact-text jp">
+          外部の方からのお問い合わせは、以下のメールアドレスまでお願いいたします。
+        </p>
+        <p class="contact-email">
+          Email:
+          <a href="bdr-riken@ml.riken.jp">example@institute.ac.jp</a>
+        </p>
+
+        <!-- TODO: 如果你有 Google Form 报名表，可以在这里加链接 -->
+        <!--
+        <p class="contact-text en">
+          For mentor/mentee sign-up, please use the form:
+          <a href="https://forms.gle/xxxxx" target="_blank">Sign-up form</a>.
+        </p>
+        <p class="contact-text jp">
+          メンター／メンティーとして参加をご希望の方は、
+          <a href="https://forms.gle/xxxxx" target="_blank">こちらのフォーム</a>からお申し込みください。
+        </p>
+        -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2025 Mirai Alliance · Women in Life Sciences</span>
+      <span class="footer-note">
+        Lightweight bilingual static site. Contents can be updated directly by organizers in HTML.
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
