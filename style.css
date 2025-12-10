@@ -433,3 +433,10 @@ footer {
   display: inline-block;
   margin-top: 8px;
 }
+
+.booklet-link.secondary {
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
