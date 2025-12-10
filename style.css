@@ -54,8 +54,8 @@ header {
 
 .brand {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  align-items: center;   /* logo 和文字垂直居中 */
+  gap: 10px;             /* logo 和文字之间的距离，可调 */
   color: var(--text-main);
   text-decoration: none;
   cursor: pointer;
@@ -71,6 +71,19 @@ header {
   font-size: 11px;
   color: var(--text-muted);
 }
+
+.brand-logo {
+  height: 40px;     /* logo 大小，可以改 30px / 36px */
+  width: auto;
+  border-radius: 6px;  /* 可选 */
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;   /* 上下排：标题 + 副标题 */
+  line-height: 1.1;
+}
+
 
 .nav-links {
   display: flex;
