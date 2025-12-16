@@ -33,6 +33,8 @@ a {
 
 /* ========== Header / Navigation ========== */
 
+/* ===== Header / Navigation ===== */
+
 header {
   position: sticky;
   top: 0;
@@ -49,24 +51,36 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 16px;
 }
 
+/* brand */
 .brand {
   display: flex;
-  align-items: center;   /* logo 和文字垂直居中 */
-  gap: 14px;             /* logo 和文字之间的距离，可调 */          
+  align-items: center;
+  gap: 14px;
   color: var(--text-main);
   text-decoration: none;
   cursor: pointer;
+}
+
+.brand-logo {
+  height: 150px;   /* 你想更大就 90 */
+  width: auto;
+  border-radius: 6px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
 }
 
 .brand-title {
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 0.18em;
-  line-height: 1.05;     /* 两行间距紧一点 */
-  text-align: left;
+  line-height: 1.05;
 }
 
 .brand-subtitle {
@@ -74,24 +88,12 @@ header {
   color: var(--text-muted);
 }
 
-.brand-logo {
-  height: 180px;     /* logo 大小，可以改 30px / 36px */
-  width: auto;
-  border-radius: 6px;  /* 可选 */
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;   /* 上下排：标题 + 副标题 */
-  line-height: 1.1;
-}
-
-
+/* nav */
 .nav-links {
   display: flex;
   gap: 22px;
   flex-wrap: wrap;
-  align-items: flex-end;   /* 让所有 tab 底部对齐，看起来整齐 */
+  align-items: flex-end;   /* 让各 tab 底部整齐 */
 }
 
 .nav-link {
@@ -105,6 +107,7 @@ header {
 .nav-en {
   font-size: 13px;
   font-weight: 500;
+  color: var(--text-main);
 }
 
 .nav-jp {
@@ -115,6 +118,15 @@ header {
 
 .nav-link:hover {
   border-bottom-color: var(--accent);
+}
+
+/* active tab */
+.nav-link.active {
+  border-bottom-color: var(--accent);
+}
+
+.nav-link.active .nav-en {
+  font-weight: 700;
 }
 
 
@@ -416,51 +428,39 @@ footer {
 
 /* ========== Responsive ========== */
 
-@media (max-width: 800px) {
-  .nav-inner {
-    flex-direction: column;
-    align-items: flex-start;
+@media (max-width: 800px){
+  .nav-links{
+    gap: 14px;
   }
-
-  .hero {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .hero-right {
-    justify-content: flex-start;
-  }
-
-  .schedule-grid {
-    grid-template-columns: minmax(0, 1fr);
+  .nav-link{
+    align-items: flex-start; /* 手机上靠左更自然 */
   }
 }
+
 
 /* ========== Booklet ========== */
 
-.booklet-description.en {
-  font-size: 13px;
-  color: var(--text-main);
-  margin-bottom: 4px;
+.booklet-description.en{
+  margin-bottom: 6px;
 }
 
-.booklet-description.jp {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin-bottom: 12px;
+.booklet-description.jp{
+  margin-bottom: 10px;
 }
 
-.booklet-link {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--accent-deep);
-  text-decoration: underline;
-  display: inline-block;
+
+.booklet-link{
+  display: block;        /* 每条链接一行 */
   margin-top: 8px;
 }
 
-.booklet-link.secondary {
-  font-size: 13px;
+.booklet-link + .booklet-link{
+  margin-top: 6px;       /* 两条之间空一点 */
+}
+
+.booklet-link.secondary{
   font-weight: 500;
   opacity: 0.85;
 }
+
 
